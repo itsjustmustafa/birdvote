@@ -1,0 +1,132 @@
+.voting_area {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  gap: 1rem;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+.result_area {
+  display: flex;
+  flex-direction: row;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  width: 70%;
+  height: 160px;
+  flex-shrink: 0;
+  row-gap: 10px;
+  padding: 10px;
+  background-color: #fffbaf;
+  background-image: repeating-linear-gradient(45deg, #fffdd2 0px 20px, transparent 20px, transparent 40px);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result * {
+  margin: 0;
+}
+
+.rank {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.result:hover .rank .move_button {
+  visibility: visible;
+}
+
+.header {}
+
+.bird_image {
+  width: 10rem;
+  height: 6.8rem;
+  object-fit: contain;
+}
+
+.vertical {
+  display: none;
+}
+
+.horizontal {
+  display: block;
+}
+
+.pageLogo {
+  width: 3rem;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+
+.remove_button {
+  width: 4rem;
+  margin-right: 4px;
+  margin-bottom: 4pm
+}
+
+.submit_button {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1300px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .vertical {
+    display: block;
+  }
+
+  .horizontal {
+    display: none;
+  }
+
+  .voting_area {
+    width: 90%;
+  }
+
+  .voting_area .bird_image {
+    width: 9rem;
+    height: 6.1rem;
+  }
+
+  .result_area {
+    flex-direction: column;
+    height: 30%;
+  }
+
+  .result_area .rank {
+    width: 50%;
+  }
+
+  .result {
+    flex-direction: row;
+  }
+
+  .rank {
+    flex-direction: column;
+  }
+
+  .move_button {
+    height: 2rem;
+    visibility: visible;
+    width: 100%;
+  }
+}
+
+.voting_area img.selected {
+  opacity: 30%;
+}
+
+.voting_area img.unselected {
+  border: 2px solid blue;
+  box-sizing: border-box;
+}
